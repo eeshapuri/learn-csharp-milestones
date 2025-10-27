@@ -133,12 +133,18 @@ public class LearningCurve : MonoBehaviour
         Debug.Log($"Hero: {hero}");
         Debug.Log($"Heroine: {heroine}");
 
-        // === Chapter 5: Structs ===
+        //Chapter 5: Structs
         Weapon huntingBow = new Weapon("Hunting Bow", 35);
         Weapon warBow = new Weapon("War Bow", 50);
 
         Debug.Log($"Weapon 1: {huntingBow}");
         Debug.Log($"Weapon 2: {warBow}");
+
+        //Chapter 5: Child Class
+        Weapon sword = new Weapon("Steel Sword", 40);
+        Paladin knight = new Paladin("Sir Banana", 10, sword);
+
+        Debug.Log(knight.PrintStatsInfo());
     }
 
     void Greet(string name)
