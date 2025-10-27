@@ -86,6 +86,26 @@ public class LearningCurve : MonoBehaviour
                 Debug.Log("Some other health value.");
                 break;
         }
+
+        // Ch 4, Collection: Array of ints
+        int[] scores = { 90, 85, 100, 75 };
+        Debug.Log($"First score: {scores[0]}");
+
+        // Ch 4, Collection: List of strings
+        List<string> inventory = new List<string>();
+        inventory.Add("Sword");
+        inventory.Add("Shield");
+        inventory.Add("Potion");
+
+        Debug.Log($"You have {inventory.Count} items in your inventory.");
+
+        // Ch 4, Collection: Dictionary
+        Dictionary<string, int> playerStats = new Dictionary<string, int>();
+        playerStats.Add("Strength", 15);
+        playerStats.Add("Agility", 12);
+        playerStats.Add("Intelligence", 10);
+
+        Debug.Log($"Player strength is {playerStats["Strength"]}");
     }
 
     void Greet(string name)
