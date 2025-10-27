@@ -31,3 +31,17 @@ public struct Weapon
         return $"{name} (Damage: {damage})";
     }
 }
+public class Paladin : Character
+{
+    public Weapon weapon;
+
+    public Paladin(string name, int level, Weapon weapon) : base(name, level)
+    {
+        this.weapon = weapon;
+    }
+
+    public string PrintStatsInfo()
+    {
+        return $"{name} (Level {level}) wields a {weapon.name} that deals {weapon.damage} damage.";
+    }
+}
