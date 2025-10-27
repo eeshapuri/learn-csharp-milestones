@@ -72,6 +72,20 @@ public class LearningCurve : MonoBehaviour
                 Debug.Log("Ferrone can't open the door yet.");
             }
         }
+
+        // Ch4, Switch Statement
+        switch (maxHealth)
+        {
+            case 100:
+                Debug.Log("Full health!");
+                break;
+            case 50:
+                Debug.Log("Half health!");
+                break;
+            default:
+                Debug.Log("Some other health value.");
+                break;
+        }
     }
 
     void Greet(string name)
