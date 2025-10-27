@@ -106,6 +106,25 @@ public class LearningCurve : MonoBehaviour
         playerStats.Add("Intelligence", 10);
 
         Debug.Log($"Player strength is {playerStats["Strength"]}");
+
+        // Ch4, Loops
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (i == 1)
+            {
+                Debug.Log($"Item at index {i}: {inventory[i]}");
+            }
+        }
+
+        foreach (string item in inventory)
+        {
+            Debug.Log($"Inventory contains: {item}");
+        }
+
+        foreach (KeyValuePair<string, int> stat in playerStats)
+        {
+            Debug.Log($"{stat.Key}: {stat.Value}");
+        }
     }
 
     void Greet(string name)
