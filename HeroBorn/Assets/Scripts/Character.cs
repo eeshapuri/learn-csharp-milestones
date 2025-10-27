@@ -16,3 +16,18 @@ public class Character
         return $"{name} (Level {level})";
     }
 }
+public struct Weapon
+{
+    public string name;
+    public int damage;
+    public Weapon(string name, int damage)
+    {
+        this.name = name;
+        this.damage = damage;
+    }
+
+    public override string ToString()
+    {
+        return $"{name} (Damage: {damage})";
+    }
+}
