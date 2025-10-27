@@ -50,6 +50,16 @@ public class LearningCurve : MonoBehaviour
             Debug.Log("Player needs healing");
         }
 
+        //Chapter 4, testing for [true] and [true!]
+        if (hasKey)
+        {
+            Debug.Log("Door unlocked!");
+        }
+        if (!hasKey)
+        {
+            Debug.Log("Door locked.");
+        }
+
     }
 
     void Greet(string name)
