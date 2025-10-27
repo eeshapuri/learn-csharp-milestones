@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
@@ -34,6 +35,20 @@ public class LearningCurve : MonoBehaviour
         Greet(playerName);
         int sum = Add(2, 3);
         Debug.Log($"Sum is {sum}");
+
+        //Chapter 4, Conditionals
+        if (maxHealth > 80)
+        {
+            Debug.Log("Player is healthy");
+        }
+        else if (maxHealth > 50)
+        {
+            Debug.Log("Player is okay");
+        }
+        else
+        {
+            Debug.Log("Player needs healing");
+        }
 
     }
 
