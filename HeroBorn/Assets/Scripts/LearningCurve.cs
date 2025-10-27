@@ -125,6 +125,13 @@ public class LearningCurve : MonoBehaviour
         {
             Debug.Log($"{stat.Key}: {stat.Value}");
         }
+
+        // Chapter 5, Classes
+        Character hero = new Character("Eleanor", 5);
+        Character heroine = new Character("Tima", 7);
+
+        Debug.Log($"Hero: {hero}");
+        Debug.Log($"Heroine: {heroine}");
     }
 
     void Greet(string name)
