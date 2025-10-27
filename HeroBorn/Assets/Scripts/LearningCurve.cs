@@ -60,6 +60,18 @@ public class LearningCurve : MonoBehaviour
             Debug.Log("Door locked.");
         }
 
+        //Chapter 4, nested if statement
+        if (playerName == "Ferrone")
+        {
+            if (hasKey)
+            {
+                Debug.Log("Ferrone can open the door.");
+            }
+            else
+            {
+                Debug.Log("Ferrone can't open the door yet.");
+            }
+        }
     }
 
     void Greet(string name)
