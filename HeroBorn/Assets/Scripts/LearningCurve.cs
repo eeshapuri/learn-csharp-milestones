@@ -145,6 +145,14 @@ public class LearningCurve : MonoBehaviour
         Paladin knight = new Paladin("Sir Banana", 10, sword);
 
         Debug.Log(knight.PrintStatsInfo());
+
+        //Chapter 5: Referencing Objects
+        Transform camTransform = GetComponent<Transform>();
+        Debug.Log($"Camera position: {camTransform.localPosition}");
+
+        GameObject lightGameObject = GameObject.Find("Directional Light");
+        Transform lightTransform = lightGameObject.GetComponent<Transform>();
+        Debug.Log($"Light position: {lightTransform.localPosition}");
     }
 
     void Greet(string name)
