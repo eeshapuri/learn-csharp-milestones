@@ -13,6 +13,11 @@ public class CollisionDetector : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log($"{gameObject.name} entered fun zone: {other.gameObject.name}");
+        if (other.CompareTag("Woot woot"))
+        {
+            Destroy(other.gameObject);
+            Debug.Log($"{other.gameObject.name} collected!");
+        }
     }
     void OnTriggerExit(Collider other)
     {
