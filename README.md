@@ -48,9 +48,9 @@ Below is a list of tasks that correspond roughly to the "Take Action" sections o
 ## Chapter 1
 Getting to Know Your Environment (9–21)
 
-- [ ] ✏️ Open the reference manual for any component from inside Unity. Paste the link: https://docs.unity3d.com/6000.2/Documentation/Manual/class-Transform.html
-- [ ] ✏️ Find the button to jump to the scripting reference the any reference manual page. Paste the link: https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Transform.html
-- [ ] ✏️ Search for the `Strings` class in [Microsoft's C# documents](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/). Paste the link: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
+- [X] ✏️ Open the reference manual for any component from inside Unity. Paste the link: https://docs.unity3d.com/6000.2/Documentation/Manual/class-Transform.html
+- [X] ✏️ Find the button to jump to the scripting reference the any reference manual page. Paste the link: https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Transform.html
+- [X] ✏️ Search for the `Strings` class in [Microsoft's C# documents](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/). Paste the link: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
 
 
 ## Chapter 2
@@ -104,48 +104,48 @@ Working with Classes, Structs, and OOP (94–119)
 
 - Classes
 	- [X] ✏️ Explain the difference between reference and value type variables: **Value types store the actual data directly (like int, float, or bool). Reference types store a reference, or ‘pointer,’ to where the data lives in memory (like string, arrays, or custom class objects). So if you copy a value type, you get a separate copy. But if you copy a reference type, both variables point to the same object.**
-	- [ ] Create Assets/Scripts/Character.cs
-		- [ ] Create a `Character` class
-		- [ ] Create `string` and `int` fields inside the Character class
-		- [ ] Create a `Character()` constructor and populate the above fields with its parameters
-	- [ ] Update Assets/Scripts/LearningCurve.cs
-		- [ ] Instantiate two new Character objects `hero` and `heroine` from the `Character` class
-		- [ ] Print out each characters data
-- [ ] Structs
-	- [ ] Update Assets/Scripts/Character.cs
-		- [ ] Add a `Weapon` struct
-		- [ ] Create `string` and `int` fields inside the Weapon struct
-		- [ ] Create a `Weapon()` constructor and populate the above fields with its parameters
-	- [ ] Update Assets/Scripts/LearningCurve.cs
-		- [ ] Instantiate two new Weapon objects `huntingBow` and `warBow` from the `Weapon` struct
-		- [ ] Print out each weapons' data
+	- [X] Create Assets/Scripts/Character.cs
+		- [X] Create a `Character` class
+		- [X] Create `string` and `int` fields inside the Character class
+		- [X] Create a `Character()` constructor and populate the above fields with its parameters
+	- [X] Update Assets/Scripts/LearningCurve.cs
+		- [X] Instantiate two new Character objects `hero` and `heroine` from the `Character` class
+		- [X] Print out each characters data
+- [X] Structs
+	- [X] Update Assets/Scripts/Character.cs
+		- [X] Add a `Weapon` struct
+		- [X] Create `string` and `int` fields inside the Weapon struct
+		- [X] Create a `Weapon()` constructor and populate the above fields with its parameters
+	- [X] Update Assets/Scripts/LearningCurve.cs
+		- [X] Instantiate two new Weapon objects `huntingBow` and `warBow` from the `Weapon` struct
+		- [X] Print out each weapons' data
 - Child classes
-	- [ ] Update Assets/Scripts/Character.cs
-		- [ ] Add a `Paladin` child class of `Character`
-		- [ ] Create a `Weapon` field inside the Paladin class
-		- [ ] Create a `Paladin()` constructor that calls the `base()` constructor. Populate the weapon in a parameter
-	- [ ] Update Assets/Scripts/LearningCurve.cs
-		- [ ] Instantiate a new Paladin object `knight` from the Paladin class
-		- [ ] Print the Paladin's name and weapon by overriding `PrintStatsInfo` in the base class
+	- [X] Update Assets/Scripts/Character.cs
+		- [X] Add a `Paladin` child class of `Character`
+		- [X] Create a `Weapon` field inside the Paladin class
+		- [X] Create a `Paladin()` constructor that calls the `base()` constructor. Populate the weapon in a parameter
+	- [X] Update Assets/Scripts/LearningCurve.cs
+		- [X] Instantiate a new Paladin object `knight` from the Paladin class
+		- [x] Print the Paladin's name and weapon by overriding `PrintStatsInfo` in the base class
 - Referencing objects
-	- [ ] Update Assets/Scripts/LearningCurve.cs
-		- [ ] Store a reference to the current game object's (Main Camera) `Transform` component using `GetComponent<>()`
-		- [ ] Log a reference to the `localPosition` field of the Main Camera's `Transform`
-		- [ ] Store a reference to the Light `GameObject` using `GameObject.Find()`
-		- [ ] Store a reference to the Light's `Transform` component using `GetComponent<>()`
-		- [ ] Log a reference to the `localPosition` field of the Light's `Transform`
+	- [x] Update Assets/Scripts/LearningCurve.cs
+		- [x] Store a reference to the current game object's (Main Camera) `Transform` component using `GetComponent<>()`
+		- [x] Log a reference to the `localPosition` field of the Main Camera's `Transform`
+		- [x] Store a reference to the Light `GameObject` using `GameObject.Find()`
+		- [x] Store a reference to the Light's `Transform` component using `GetComponent<>()`
+		- [x] Log a reference to the `localPosition` field of the Light's `Transform`
 
 
 
 ## Chapter 6
 Getting Your Hands Dirty with Unity (120–148)
 
-- [ ] Use primitive cubes and move, rotate, and scale tools to create a level or "world" in Unity
-- [ ] Add materials to primitives in Unity to change their color
-- [ ] Use parenting and "empty objects" in the Hierarchy tab to organize your project
-- [ ] Create, update, and use prefab game objects
-- [ ] Create timeline animations by recording keyframes and editing curves in Unity
-- [ ] Add and edit a particle system to a game object in Unity
+- [x] Use primitive cubes and move, rotate, and scale tools to create a level or "world" in Unity
+- [x] Add materials to primitives in Unity to change their color
+- [x] Use parenting and "empty objects" in the Hierarchy tab to organize your project
+- [x] Create, update, and use prefab game objects
+- [x] Create timeline animations by recording keyframes and editing curves in Unity
+- [x] Add and edit a particle system to a game object in Unity
 
 
 
