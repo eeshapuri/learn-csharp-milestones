@@ -1,44 +1,80 @@
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int _score;
+    public TextMeshProUGUI gameStatusText;
+    public TextMeshProUGUI winText;
+
+    public static GameManager I { get; private set; }
+    [SerializeField] private int _score = 0;
+    [SerializeField] private int _playerHealth = 100;
+    [SerializeField] private int targetScore = 3;
+
+    void Awake()
+    {
+        if (I == null) I = this;
+        else { Destroy(gameObject); return; }
+    }
+
+    void Start()
+    {
+        Time.timeScale = 1f;
+
+        if (winText != null)
+            winText.gameObject.SetActive(false);
+        UpdateHUD();
+    }
     public int Score
     {
-        get { return _score; }
+        get => _score;
         set
         {
             _score = value;
-            Debug.Log("Score updated: " + _score);
+            UpdateHUD();
         }
     }
-    private int _playerHealth = 100;
     public int PlayerHealth
     {
-        get { return _playerHealth; }
+        get => _playerHealth;
         set
         {
             _playerHealth = value;
-            if (_playerHealth <= 0)
-            {
-                Debug.Log("Game Over!");
-            }
+            UpdateHUD();
         }
     }
-    void Start()
+    void UpdateHUD()
     {
-        Score = 0;
-        Debug.Log("And we begin! Score = " + Score + ", Health = " + PlayerHealth);
+        if (gameStatusText != null)
+            gameStatusText.text = $"Health: {_playerHealth} Score: {_score}";
     }
-    void Update()
+
+    public void ShowWin()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Score += 10;
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            PlayerHealth -= 10;
-        }
+        if (winText != null)
+            winText.gameObject.SetActive(true);
+    }
+
+    public void AddScore(int amount = 1)
+    {
+        Score += amount;
+        if (Score >= targetScore) WinGame();
+    }
+
+    public void DamagePlayer(int amount = 10)
+    {
+        PlayerHealth = MathF.Max(0, PlayerHealth - amount);
+    }
+
+    void WinGame()
+    {
+        ShowWin();
+        Time.timeScale = 0f;
+    }
+
+    public void HideWinAndResume()
+    {
+        if (winText != null) winText.gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
