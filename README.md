@@ -181,8 +181,8 @@ Scripting Game Mechanics (176–207)
 - [x] Add a shooting mechanic
 	- [x] Create a "projectile" prefab that moves forward using `RigidBody.velocity`
 	- [x] Instantiate the projectile on click and destroy it after `3` seconds
-- [ ] Create a GameManager
- 	- [ ] Use `get` and `set` properties to return and assign properties that are used across the game
+- [x] Create a GameManager
+ 	- [x] Use `get` and `set` properties to return and assign properties that are used across the game
 - [ ] Add a simple UI to inform the user of game state(s)
 	- [ ] Add text to show the health and items counts to the user
 	- [ ] Add a win condition to the game and display it in the UI
